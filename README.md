@@ -18,3 +18,23 @@ nvm install 20
 ```
 npm install -g typescript
 ```
+
+- tsconfig.jsonを作成
+```
+tsc --init
+```
+
+## 実行とコンパイル
+.tsファイルをコンソール上で実行する場合
+```
+node FileName.ts
+```
+
+.jsファイルにコンパイルして実行する場合
+```
+# .tsから.jsにコンパイル
+tsc FileName.ts
+
+# .jsファイルの実行
+node FileName.js
+```
