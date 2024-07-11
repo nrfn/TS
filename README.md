@@ -85,3 +85,21 @@ animals = [4, 5];
 // string型の配列に文字列を代入しているためエラー
 animals = "gorilla"; 
 ```
+
+
+
+## オブジェクト型
+オブジェクトはプロパティの集合体。\
+プロパティはキーと値のペア。\
+オブジェクトの型注釈は、プロパティ形式で記述。
+```
+let me: { name: string; age: number } = { name: "nrfn", age: 27 };
+
+me = { name: "shh", numberOfLegs: 32 };
+
+// プロパティageがないためエラー
+me = { name: "nrfn" };
+
+// string型に数値を代入しているためエラー
+me = { name: 2, age: 13 };
+```
