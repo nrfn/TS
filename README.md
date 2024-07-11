@@ -27,12 +27,12 @@ tsc --init
 
 
 ## 実行とコンパイル
-.tsファイルをコンソール上で実行する場合
+- .tsファイルをコンソール上で実行する場合
 ```
 node FileName.ts
 ```
 
-.jsファイルにコンパイルして実行する場合
+- .jsファイルにコンパイルして実行する場合
 ```
 # .tsから.jsにコンパイル
 tsc FileName.ts
@@ -100,6 +100,16 @@ me = { name: "shh", numberOfLegs: 32 };
 // プロパティageがないためエラー
 me = { name: "nrfn" };
 
-// string型に数値を代入しているためエラー
+// string型のnameに数値を代入しているためエラー
 me = { name: 2, age: 13 };
+```
+
+### オプションプロパティ
+オブジェクト型のプロパティを任意にしたい場合は、キーの後ろに`?`をつける。
+```
+let me: { name: string; age?: number }
+me = { name: "nrfn", age: 32 };
+
+// プロパティageがなくてもエラーにならない
+animal = { name: "shh" };
 ```
