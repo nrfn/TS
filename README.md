@@ -2,6 +2,7 @@
 TypeScriptgit 学習用のリポジトリです。
 
 
+
 ## 環境構築
 - nvmをインストール
 ```
@@ -104,6 +105,8 @@ me = { name: "nrfn" };
 me = { name: 2, age: 13 };
 ```
 
+
+
 ### オプションプロパティ
 オブジェクト型のプロパティを任意にしたい場合は、キーの後ろに`?`をつける。
 ```
@@ -112,4 +115,35 @@ me = { name: "nrfn", age: 32 };
 
 // プロパティageがなくてもエラーにならない
 animal = { name: "shh" };
+```
+
+
+
+### 型エイリアス
+型注釈をインターフェースのように定義できる。
+```
+// 例1
+type tsType = {
+  str: string;
+  num: number;
+};
+let tsObj: tsType = { str: "string", num: 1 };
+
+type tsTypeUnion = number | string;
+let numVal: tsTypeUnion = 1;
+let strVal: tsTypeUnion = "string";
+```
+
+
+
+### インターフェース
+型エイリアスと定義の仕方、使い方が似ている。\
+インターフェースは、オブジェクトやクラスの仕様の定義が主な役割になる。\
+型エイリアスは変数を含めた複数箇所で何度も利用するために定義するのが役割である。
+```
+interface If {
+  str: string;
+  num: number;
+}
+let tsIfObj: If = { str: "string", num: 1 };
 ```
