@@ -114,7 +114,7 @@ let me: { name: string; age?: number }
 me = { name: "nrfn", age: 32 };
 
 // プロパティageがなくてもエラーにならない
-animal = { name: "shh" };
+me = { name: "shh" };
 ```
 
 
